@@ -2,7 +2,7 @@
 > **A Study in Autonomous Constraint Satisfaction and Information-Theoretic Homeostasis.**
 
 ## 🌌 The "No-God" Hypothesis
-Most simulations use hard-coded rules (gravity, friction, collision). **Aevum has zero hard-coded laws.** It is a 48-bit vacuum where "Physics" is not an input, but an **emergent survival strategy.** The system provides the "hunger" (Global Decay) and the "void" (The Big Crunch), but the bits themselves must invent the "geometry" of the laws required to persist.
+Most simulations use hard-coded rules (gravity, friction, collision). **Aevum has zero hard-coded laws.** It is a 48-bit vacuum where "Physics" is not an input, but an **emergent survival strategy.** The system provides the "hunger" (Global Decay), but the bits themselves must invent the "geometry" of the laws required to persist.
 
 ---
 
