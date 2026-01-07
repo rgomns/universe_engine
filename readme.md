@@ -1,29 +1,32 @@
-# Aevum: Autonomous Emergent Homeostasis in Discrete Bit-Environments
+# Aevum: The Self-Architecting Universe
+> **A Study in Autonomous Constraint Satisfaction and Information-Theoretic Homeostasis.**
 
-**Aevum** is a research framework for studying **Non-Gradient Self-Organization**. It simulates a 48-bit universe where order is not programmed by an agent, but emerges as a structural requirement for information persistence. 
-
-The system demonstrates that "Intelligence" can be modeled as a defensive architecture against systemic entropy.
+## 🌌 The "No-God" Hypothesis
+Most simulations use hard-coded rules (gravity, friction, collision). **Aevum has zero hard-coded laws.** It is a 48-bit vacuum where "Physics" is not an input, but an **emergent survival strategy.** The system provides the "hunger" (Global Decay) and the "void" (The Big Crunch), but the bits themselves must invent the "geometry" of the laws required to persist.
 
 ---
 
 ## 🔬 Core Research Pillars
 
-### 1. Subtractive Darwinism & Constraint Evolution
-Unlike typical Genetic Algorithms that optimize for a predefined fitness score, Aevum optimizes for **Survival via Pruning**.
-* **Constraint Lifecycle:** Laws are birthed with random bit-scopes (2-bit/3-bit) and survive based on their ability to identify and remove high-entropy noise.
-* **The Reward Loop:** Successful laws gain "Strength" (`CONSTRAINT_REWARD = 0.05`). Laws that fail to find patterns suffer from **Temporal Decay**, eventually hitting the `MIN_STRENGTH` floor and being erased.
+### 1. Emergence via Selection Pressure
+The universe is seeded with random noise. Order emerges because the environment is fundamentally hostile:
+* **The Filter:** A constant `GLOBAL_DECAY` prunes any bit-pattern that lacks a protective "Law."
+* **The Reward Loop:** Constraints (laws) are generated randomly. Any law that accidentally describes a pattern in the noise is rewarded with "Life" (`CONSTRAINT_REWARD`). Useless laws suffer from **Temporal Decay** and are erased.
+* **The Result:** The "Physics" of the universe is simply the set of the most successful mathematical descriptions of noise that refused to die.
 
 
 
-### 2. Emergent Structural Invariants (The "Ghost Laws")
-Aevum tracks the persistence of laws across **Big Crunches** (re-initialization events triggered when population $\Omega < 80$).
-* **Genetic Memory:** High-strength laws that survive for `FUNDAMENTAL_LIFESPAN = 2000` cycles are classified as **Fundamentals**.
-* **Post-Collapse Rebound:** The presence of these "Ghost Laws" provides a structural scaffold that reduces the entropy-re-stabilization time of the next universe by up to **75%**.
+### 2. The Logic of the "Big Crunch"
+The collapse is not a bug; it is a **Phase Transition** triggered when the population ($\Omega$) falls below a critical threshold (Heat Death).
+* **Information Survival:** While the bit-population is reset, the **Fundamental Laws** (those with >2000 cycles of age) act as a "Genetic Memory."
+* **Ghost Laws:** These remnant laws survive the void and dictate the shape of the *next* Big Bang, reducing re-stabilization time by up to **75%**. This proves that information can survive the death of its medium.
 
-### 3. Graph Topology & Component Analysis
-The system models the universe as a dynamic graph where bits are vertices and constraints are edges.
-* **Hub-Bit Discovery:** The engine calculates **Degree Centrality** to identify "Anchor Bits"—bits that the universe "chooses" to center its logic around.
-* **LCC Dynamics:** We track the **Largest Connected Component (LCC)**. A phase transition to "Stable Complexity" is marked by the merger of isolated constraint islands into a unified logical network.
+
+
+### 3. Graph Topology & Unified Theory
+In the early cycles, laws exist as "islands"—disconnected rules about specific bit-indices.
+* **The Merging:** As the simulation matures, these islands merge into a **Largest Connected Component (LCC)**.
+* **Structural Anchors:** The system autonomously identifies "Anchor Bits" (e.g., Bits 7, 29, 36). These are the structural hubs that the universe "chooses" to center its logic around to maintain global homeostasis.
 
 
 
@@ -31,29 +34,27 @@ The system models the universe as a dynamic graph where bits are vertices and co
 
 ## 📊 Phase Classification
 
-Aevum classifies universes into three distinct thermodynamic phases based on **KL Divergence** and **Entropy Delta**:
+Aevum classifies universes into three distinct thermodynamic states:
 
-| Phase | Characteristics | Entropy State |
+| Phase | Entropy State | Characteristics |
 | :--- | :--- | :--- |
-| **Subcritical** | Low connection density; laws die faster than they form. | High / Unstable |
-| **Critical** | The "Edge of Chaos." High innovation; laws are fluid but persistent. | Moderate / Descending |
-| **Supercritical** | Frozen logic; massive LCC; universe resists all new noise. | Low / Rigid |
-
-
+| **Subcritical** | High / Unstable | Laws die faster than they form; total chaos. |
+| **Critical** | Moderate / Evolving | The "Edge of Chaos." High innovation and persistent complexity. |
+| **Supercritical** | Low / Rigid | Frozen logic; the universe resists all new noise and innovation. |
 
 ---
 
 ## 🛠 Project Components
 
-* **`universe_engine.py`**: The core simulation engine. Handles the $N=48$ bit-environment and the lifecycle of 2-bit/3-bit constraints.
-* **`phase_sweep.py`**: A parallelized exploration tool that maps the "Habitable Zone" of parameter space ($P_{new}$ vs. $Global Decay$).
-* **`plot_phase_map.py`**: Generates heatmaps of emergent law phases, identifying where "Digital Life" is most likely to emerge.
+* **`universe_engine.py`**: The "Vacuum" where bits fight for persistence via 2-bit and 3-bit constraints.
+* **`phase_sweep.py`**: A parallelized explorer that searches the "Multiverse" for parameters where life-like complexity is possible.
+* **`plot_phase_map.py`**: Visualizes the "Habitable Zone" between total entropy and frozen rigidity.
 
 ---
 
 ## 🚀 Execution & Reproducibility
 
-### Simulation Ensemble
-Run a comparative study of **EVO_BASE** (Standard), **EVO_CHAOS** (High Innovation), and **EVO_FROZEN** (High Pressure):
+### Run the Evolution Ensemble
+Compare standard evolution against chaos and frozen states:
 ```bash
 python universe_engine.py
