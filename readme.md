@@ -2,59 +2,63 @@
 > **A Study in Autonomous Constraint Satisfaction and Information-Theoretic Homeostasis.**
 
 ## 🌌 The "No-God" Hypothesis
-Most simulations use hard-coded rules (gravity, friction, collision). **Aevum has zero hard-coded laws.** It is a 48-bit vacuum where "Physics" is not an input, but an **emergent survival strategy.** The system provides the "hunger" (Global Decay), but the bits themselves must invent the "geometry" of the laws required to persist.
+In Aevum, **Physics is a survival strategy.** Most simulations use hard-coded rules to dictate behavior. Aevum provides only a vacuum (48-bits) and a pressure (Global Decay). The "Laws" that govern the system are not inputs; they are the mathematical inventions of a system trying not to disappear.
 
 ---
 
-## 🔬 Core Research Pillars
+## 🧮 The Master Equation
+The stability of the Aevum universe is defined by the tension between emergent order and environmental noise:
 
-### 1. Emergence via Selection Pressure
-The universe is seeded with random noise. Order emerges because the environment is fundamentally hostile:
-* **The Filter:** A constant `GLOBAL_DECAY` prunes any bit-pattern that lacks a protective "Law."
-* **The Reward Loop:** Constraints (laws) are generated randomly. Any law that accidentally describes a pattern in the noise is rewarded with "Life" (`CONSTRAINT_REWARD`). Useless laws suffer from **Temporal Decay** and are erased.
-* **The Result:** The "Physics" of the universe is simply the set of the most successful mathematical descriptions of noise that refused to die.
+$$\Large \Omega_{t+1} = \Omega_t \cdot e^{\sum R_i - \delta} + \Phi$$
+
+* **$\Omega$ (Population):** The measure of systemic health.
+* **$R_i$ (Constraint Reward):** The "Shielding" effect of evolved logic.
+* **$\delta$ (Global Decay):** The entropic pressure of the vacuum.
+* **$\Phi$ (Ghost Constant):** The immortal logical skeleton that survives systemic collapse.
+
+---
+
+## 🔬 The Lifecycle of Emergence
+
+### 1. Emergent Growth (Order from Noise)
+At Cycle 0, there is only noise. The system generates random "hypotheses" (Constraints). 
+* **Autonomous Filtering:** Laws are not judged by a fitness function; they are judged by the **Decay.** If a law fails to identify a pattern, it decays and vanishes. 
+* **Homeostasis:** Growth occurs when the sum of discovered patterns ($R_i$) creates a protective envelope stronger than the environmental decay ($\delta$).
 
 
 
-### 2. The Logic of the "Big Crunch"
-The collapse is not a bug; it is a **Phase Transition** triggered when the population ($\Omega$) falls below a critical threshold (Heat Death).
-* **Information Survival:** While the bit-population is reset, the **Fundamental Laws** (those with >2000 cycles of age) act as a "Genetic Memory."
-* **Ghost Laws:** These remnant laws survive the void and dictate the shape of the *next* Big Bang, reducing re-stabilization time by up to **75%**. This proves that information can survive the death of its medium.
+### 2. The Emergent Crunch (Systemic Failure)
+The "Big Crunch" is an emergent property of **Over-Specialization** or **Entropy Spikes.**
+* When the evolved laws become too rigid (Supercritical) or too weak (Subcritical), the population $\Omega$ collapses.
+* This isn't a programmed reset—it is the system hitting a **Thermodynamic Floor.** The universe collapses because it can no longer support the information density required for life.
 
 
 
-### 3. Graph Topology & Unified Theory
-In the early cycles, laws exist as "islands"—disconnected rules about specific bit-indices.
-* **The Merging:** As the simulation matures, these islands merge into a **Largest Connected Component (LCC)**.
-* **Structural Anchors:** The system autonomously identifies "Anchor Bits" (e.g., Bits 7, 29, 36). These are the structural hubs that the universe "chooses" to center its logic around to maintain global homeostasis.
+### 3. The Ghost in the Machine (Stability across Rebirth)
+The most profound emergence in Aevum is **Persistence.** * **Ghost Laws:** When the universe collapses, the bit-strings die, but the **Fundamental Laws** do not. 
+* **The Scaffold:** These laws ($>2000$ cycles old) act as a "Genetic Memory." They dictate the symmetry of the next Big Bang, ensuring that the next universe starts not from chaos, but from the "Fossilized Logic" of its ancestor.
 
 
 
 ---
 
-## 📊 Phase Classification
+## 📊 Phase Topology
 
-Aevum classifies universes into three distinct thermodynamic states:
+Aevum universes naturally settle into one of three emergent states:
 
-| Phase | Entropy State | Characteristics |
-| :--- | :--- | :--- |
-| **Subcritical** | High / Unstable | Laws die faster than they form; total chaos. |
-| **Critical** | Moderate / Evolving | The "Edge of Chaos." High innovation and persistent complexity. |
-| **Supercritical** | Low / Rigid | Frozen logic; the universe resists all new noise and innovation. |
+| Phase | Description |
+| :--- | :--- |
+| **Subcritical** | The "Evaporating Universe." Logic fails to take root; entropy dominates. |
+| **Critical** | The "Living Universe." A constant, vibrating balance of innovation and persistence. |
+| **Supercritical** | The "Crystal Universe." Logic becomes so rigid that the system ceases to evolve. |
 
 ---
 
 ## 🛠 Project Components
-
-* **`universe_engine.py`**: The "Vacuum" where bits fight for persistence via 2-bit and 3-bit constraints.
-* **`phase_sweep.py`**: A parallelized explorer that searches the "Multiverse" for parameters where life-like complexity is possible.
-* **`plot_phase_map.py`**: Visualizes the "Habitable Zone" between total entropy and frozen rigidity.
+* **`universe_engine.py`**: The vacuum where bits compete for persistence.
+* **`phase_sweep.py`**: A multi-verse explorer seeking the "Habitable Zone" of physics.
+* **`plot_phase_map.py`**: Visualizes the phase boundaries of emergent order.
 
 ---
 
-## 🚀 Execution & Reproducibility
-
-### Run the Evolution Ensemble
-Compare standard evolution against chaos and frozen states:
-```bash
-python universe_engine.py
+> **"Order is the shape that information takes when it refuses to die."** > — *Aevum Project Logs*
