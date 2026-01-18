@@ -170,100 +170,107 @@ It offers a platform for exploring foundational questions in:
 
 If you are a researcher interested in collaborating, analyzing the model, or extending the reconstruction pipeline, feel free to reach out.
 
-
+---
 
 
 # Microscopic Law (Fundamental Dynamics)
 
-At the deepest level, the model is defined by a **real**, **deterministic**, **time‑independent**, and **reversible** update rule acting on a high‑dimensional real state vector.
+At the deepest level, the model is defined by a **real**, **deterministic**, **time-independent**, and **reversible** update rule acting on a high-dimensional real state vector.
 
 ## Microscopic State
 
-The ontic state of the universe at time $t$ is a real vector:
-$$
-x_t \in \mathbb{R}^N,
-$$
+The ontic state of the universe at time *t* is a real vector:
+
+```
+x_t ∈ ℝ^N
+```
+
 where
-$$
-N = \text{n\_agents} \times \text{bits\_per\_agent}.
-$$
+
+```
+N = n_agents × bits_per_agent
+```
 
 No complex numbers, amplitudes, phases, or probabilistic elements appear at the fundamental level.
 
 ---
 
-# Fundamental Update Rule
+## Fundamental Update Rule
 
-Time evolution consists of applying a fixed sequence of locality‑biased orthogonal transformations:
-$$
-x_{t+1} = W_L W_{L-1} \cdots W_2 W_1 \, x_t,
-$$
-where each $W_i \in \mathbb{R}^{N \times N}$ is an **orthogonal matrix** satisfying:
-$$
-W_i^T W_i = I.
-$$
+Time evolution consists of applying a fixed sequence of locality-biased orthogonal transformations:
+
+```
+x_{t+1} = W_L · W_{L−1} · ... · W_2 · W_1 · x_t
+```
+
+Each `W_i` is a real orthogonal matrix:
+
+```
+W_i ∈ ℝ^{N × N},   with   W_iᵀ · W_i = I
+```
 
 This guarantees:
 
-- **Reversibility**  
-  $$
-  x_{t} = W_1^{-1} W_2^{-1} \cdots W_L^{-1} x_{t+1}
-  $$
+- **Reversibility**:  
+  ```
+  x_t = W_1⁻¹ · W_2⁻¹ · ... · W_L⁻¹ · x_{t+1}
+  ```
 
-- **Norm preservation**  
-  $$
-  \|x_{t+1}\| = \|x_t\|
-  $$
+- **Norm preservation**:  
+  ```
+  ||x_{t+1}|| = ||x_t||
+  ```
 
-- **Deterministic dynamics**
-
+- **Deterministic dynamics**  
 - **No drift or dissipation**
 
 ---
 
-# Construction of Each Rule Layer
+## Construction of Each Rule Layer
 
-Each orthogonal matrix $W_i$ is constructed from simple locality‑biased components:
+Each orthogonal matrix `W_i` is constructed from simple locality-biased components:
 
-### 1. Intra‑agent mixing
+### 1. Intra-agent mixing
 
-Each agent $a$ has a strongly mixing orthogonal block:
-$$
-O_a \in \mathbb{R}^{b \times b},
-$$
-where $b = \text{bits\_per\_agent}$.
+Each agent `a` has a strongly mixing orthogonal block:
 
-### 2. Nearest‑neighbor couplings
+```
+O_a ∈ ℝ^{b × b},   where   b = bits_per_agent
+```
 
-Scaled by a locality parameter $\varepsilon_{\text{nn}}$.
+### 2. Nearest-neighbor couplings
 
-### 3. Next‑nearest‑neighbor couplings
+Scaled by a locality parameter `eps_nn`.
 
-Scaled by $\varepsilon_{\text{nnn}}$.
+### 3. Next-nearest-neighbor couplings
+
+Scaled by `eps_nnn`.
 
 ### 4. Global mixing parameter
 
-A single scalar $\theta$ blends identity with the local structure:
-$$
-W_{\text{pre}} = \cos\theta \, I + \sin\theta \, Q_{\text{local}}.
-$$
+A scalar `theta` blends identity with the local structure:
+
+```
+W_pre = cos(theta) · I + sin(theta) · Q_local
+```
 
 ### 5. Final orthogonalization
 
 A QR decomposition produces the exact reversible update:
-$$
-W = \text{QR}(W_{\text{pre}}).
-$$
 
-This ensures the microscopic rule is **strictly orthogonal** and therefore **strictly reversible**.
+```
+W = QR(W_pre)
+```
+
+This ensures the microscopic rule is strictly orthogonal and therefore strictly reversible.
 
 ---
 
-# Summary of the Microscopic Law
+## Summary of the Microscopic Law
 
 In one sentence:
 
-> **The fundamental dynamics are a fixed sequence of locality‑biased orthogonal transformations acting on a real state vector.**
+> The fundamental dynamics are a fixed sequence of locality-biased orthogonal transformations acting on a real state vector.
 
 This is the only rule at the microscopic level.
 
@@ -281,7 +288,7 @@ All of those appear **only at the emergent level**.
 
 ---
 
-# Why This Counts as Emergence
+## Why This Counts as Emergence
 
 From this simple real reversible rule, the model exhibits:
 
@@ -290,10 +297,10 @@ From this simple real reversible rule, the model exhibits:
 - **local** effective interactions  
 - **Wigner–Dyson** level statistics  
 - **extended eigenvectors**  
-- **quantum‑chaotic** behavior  
+- **quantum-chaotic** behavior  
 - a full **phase diagram** (ordered → quantum chaotic → thermal)
 
 None of these structures are present in the microscopic rule.  
-They arise only at the macroscopic, coarse‑grained level.
+They arise only at the macroscopic, coarse-grained level.
 
 This is emergence in the strongest sense used in physics.
