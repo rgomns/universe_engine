@@ -178,64 +178,42 @@ If you are a researcher interested in collaborating, analyzing the model, or ext
 At the deepest level, the model is defined by a **real**, **deterministic**, **time‑independent**, and **reversible** update rule acting on a high‑dimensional real state vector.
 
 ## Microscopic State
-The ontic state of the universe at time \( t \) is a real vector:
 
-
-\[
+The ontic state of the universe at time $t$ is a real vector:
+$$
 x_t \in \mathbb{R}^N,
-\]
-
-
+$$
 where
-
-
-\[
+$$
 N = \text{n\_agents} \times \text{bits\_per\_agent}.
-\]
-
-
+$$
 
 No complex numbers, amplitudes, phases, or probabilistic elements appear at the fundamental level.
 
 ---
 
 # Fundamental Update Rule
+
 Time evolution consists of applying a fixed sequence of locality‑biased orthogonal transformations:
-
-
-\[
+$$
 x_{t+1} = W_L W_{L-1} \cdots W_2 W_1 \, x_t,
-\]
-
-
-where each \( W_i \in \mathbb{R}^{N \times N} \) is an **orthogonal matrix** satisfying:
-
-
-\[
+$$
+where each $W_i \in \mathbb{R}^{N \times N}$ is an **orthogonal matrix** satisfying:
+$$
 W_i^T W_i = I.
-\]
-
-
+$$
 
 This guarantees:
 
 - **Reversibility**  
-  
-
-\[
+  $$
   x_{t} = W_1^{-1} W_2^{-1} \cdots W_L^{-1} x_{t+1}
-  \]
-
-
+  $$
 
 - **Norm preservation**  
-  
-
-\[
+  $$
   \|x_{t+1}\| = \|x_t\|
-  \]
-
-
+  $$
 
 - **Deterministic dynamics**
 
@@ -245,44 +223,37 @@ This guarantees:
 
 # Construction of Each Rule Layer
 
-Each orthogonal matrix \( W_i \) is constructed from simple locality‑biased components:
+Each orthogonal matrix $W_i$ is constructed from simple locality‑biased components:
 
 ### 1. Intra‑agent mixing
-Each agent \( a \) has a strongly mixing orthogonal block:
 
-
-\[
+Each agent $a$ has a strongly mixing orthogonal block:
+$$
 O_a \in \mathbb{R}^{b \times b},
-\]
-
-
-where \( b = \text{bits\_per\_agent} \).
+$$
+where $b = \text{bits\_per\_agent}$.
 
 ### 2. Nearest‑neighbor couplings
-Scaled by a locality parameter \( \varepsilon_{\text{nn}} \).
+
+Scaled by a locality parameter $\varepsilon_{\text{nn}}$.
 
 ### 3. Next‑nearest‑neighbor couplings
-Scaled by \( \varepsilon_{\text{nnn}} \).
+
+Scaled by $\varepsilon_{\text{nnn}}$.
 
 ### 4. Global mixing parameter
-A single scalar \( \theta \) blends identity with the local structure:
 
-
-\[
+A single scalar $\theta$ blends identity with the local structure:
+$$
 W_{\text{pre}} = \cos\theta \, I + \sin\theta \, Q_{\text{local}}.
-\]
-
-
+$$
 
 ### 5. Final orthogonalization
+
 A QR decomposition produces the exact reversible update:
-
-
-\[
+$$
 W = \text{QR}(W_{\text{pre}}).
-\]
-
-
+$$
 
 This ensures the microscopic rule is **strictly orthogonal** and therefore **strictly reversible**.
 
