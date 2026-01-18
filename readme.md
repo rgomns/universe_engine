@@ -77,7 +77,6 @@ Printed to console:
 ## 📁 Repository Structure
 
 ```
-.
 ├── release_script.py               # Main script (phase sweep + QM pipeline)
 ├── logs_phase/
 │   ├── phase_diagram_results.jsonl
